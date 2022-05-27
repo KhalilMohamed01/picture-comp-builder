@@ -5,26 +5,26 @@
                     </div>
                     <div class="block-tools">
                         <div id="checkboxes" class="d-inline">
-                            <input @change="$emit('updateData',componentElementsCopy)" v-model="componentElementsCopy[selectedId].boldBool" type="checkbox" name="rGroup" value="1" id="r1" />
+                            <input @change="$emit('updateData',pictureElementsCopy)" v-model="pictureElementsCopy[selectedId].boldBool" type="checkbox" name="rGroup" value="1" id="r1" />
                             <label class="whatever" for="r1"><i class="fa-solid fa-bold"></i></label>
-                            <input @change="$emit('updateData',componentElementsCopy)" v-model="componentElementsCopy[selectedId].italicBool" type="checkbox" name="rGroup" value="2" id="r2" />
+                            <input @change="$emit('updateData',pictureElementsCopy)" v-model="pictureElementsCopy[selectedId].italicBool" type="checkbox" name="rGroup" value="2" id="r2" />
                             <label class="whatever" for="r2"><i class="fa-solid fa-italic"></i></label>
-                            <input @change="$emit('updateData',componentElementsCopy)" v-model="componentElementsCopy[selectedId].underlineBool" type="checkbox" name="rGroup" value="3" id="r3" />
+                            <input @change="$emit('updateData',pictureElementsCopy)" v-model="pictureElementsCopy[selectedId].underlineBool" type="checkbox" name="rGroup" value="3" id="r3" />
                             <label class="whatever" for="r3"><i class="fa-solid fa-underline"></i></label>
-                            <input @change="$emit('updateData',componentElementsCopy)" v-model="componentElementsCopy[selectedId].strikeThroughBool" type="checkbox" name="rGroup" value="4" id="r4" />
+                            <input @change="$emit('updateData',pictureElementsCopy)" v-model="pictureElementsCopy[selectedId].strikeThroughBool" type="checkbox" name="rGroup" value="4" id="r4" />
                             <label class="whatever" for="r4"><i class="fa-solid fa-strikethrough"></i></label>
                         </div>
                         <div id="checkboxes" class="d-inline p-2">
-                            <input @change="$emit('updateData',componentElementsCopy)" v-model="componentElementsCopy[selectedId].startBool" type="checkbox" name="mGroup" value="1" id="p1" />
+                            <input @change="$emit('updateData',pictureElementsCopy)" v-model="pictureElementsCopy[selectedId].startBool" type="checkbox" name="mGroup" value="1" id="p1" />
                             <label class="whatever" for="p1"><i class="fa-solid fa-align-left"></i></label>
-                            <input @change="$emit('updateData',componentElementsCopy)" v-model="componentElementsCopy[selectedId].centerBool" type="checkbox" name="mGroup" value="2" id="p2" />
+                            <input @change="$emit('updateData',pictureElementsCopy)" v-model="pictureElementsCopy[selectedId].centerBool" type="checkbox" name="mGroup" value="2" id="p2" />
                             <label class="whatever" for="p2"><i class="fa-solid fa-align-center"></i></label>
-                            <input @change="$emit('updateData',componentElementsCopy)" v-model="componentElementsCopy[selectedId].endBool" type="checkbox" name="mGroup" value="3" id="p3" />
+                            <input @change="$emit('updateData',pictureElementsCopy)" v-model="pictureElementsCopy[selectedId].endBool" type="checkbox" name="mGroup" value="3" id="p3" />
                             <label class="whatever" for="p3"><i class="fa-solid fa-align-right"></i></label>
                         </div>
                                                     <div v-if="selectedId === 1" class="d-inline text-start ">
                                                     <label for="lineH"><i class="fa-solid fa-text-height pe-1"></i></label>
-                                <select id="lineH" @change="$emit('updateData',componentElementsCopy)" class="custom-select" v-model="componentElementsCopy[selectedId].lineHeight" aria-label=".form-select-sm example">
+                                <select id="lineH" @change="$emit('updateData',pictureElementsCopy)" class="custom-select" v-model="pictureElementsCopy[selectedId].lineHeight" aria-label=".form-select-sm example">
                                     <option value="lh-1">
                                         <label class="custom-select-option" for="r2">1</label>
                                     </option>
@@ -42,7 +42,7 @@
 
                         <div class="fontSettings">
                             <div class="d-inline text-start ">
-                                <select @change="$emit('updateData',componentElementsCopy)" class="custom-select" v-model="componentElementsCopy[selectedId].fontSize" aria-label=".form-select-sm example">
+                                <select @change="$emit('updateData',pictureElementsCopy)" class="custom-select" v-model="pictureElementsCopy[selectedId].fontSize" aria-label=".form-select-sm example">
                                     pick ure size
                                     <option class="h1" value="fs-1">
                                         <label class="custom-select-option" for="r2">Display-1</label>
@@ -63,15 +63,15 @@
                             </div>
                                                                         <div id="checkboxes" class="d-inline p-1">
                                 <input type="checkbox" name="pppGroup" value="1" id="ppp1" disabled />
-                                <label class="whatever" for="ppp1"><i class="fa-solid fa-paintbrush"></i>&nbsp;<input @change="$emit('updateData',componentElementsCopy)"
-                                        v-model="componentElementsCopy[selectedId].txtcolor" type="color" value="#1DB8CE" id="choosedCo1" />
+                                <label class="whatever" for="ppp1"><i class="fa-solid fa-paintbrush"></i>&nbsp;<input @change="$emit('updateData',pictureElementsCopy)"
+                                        v-model="pictureElementsCopy[selectedId].txtcolor" type="color" value="#1DB8CE" id="choosedCo1" />
                                 </label>
 
                             </div>
                             <div id="checkboxes" class="d-inline ">
-                                <input @change="$emit('updateData',componentElementsCopy)" v-model="componentElementsCopy[selectedId].isHighlited" type="checkbox" name="fffGroup" value="1" id="n1" />
-                                <label class="whatever" for="n1"><i class="fa-solid fa-highlighter"></i>&nbsp;<input @change="$emit('updateData',componentElementsCopy)"
-                                        v-model="componentElementsCopy[selectedId].bgcolor" type="color" value="#1DB8CE"
+                                <input @change="$emit('updateData',pictureElementsCopy)" v-model="pictureElementsCopy[selectedId].isHighlited" type="checkbox" name="fffGroup" value="1" id="n1" />
+                                <label class="whatever" for="n1"><i class="fa-solid fa-highlighter"></i>&nbsp;<input @change="$emit('updateData',pictureElementsCopy)"
+                                        v-model="pictureElementsCopy[selectedId].bgcolor" type="color" value="#1DB8CE"
                                         id="choosedColonl1" /></label>
 
                             </div>
@@ -84,15 +84,15 @@
 <script>
 export default {
   props: {
-    componentElements: Array,
+    pictureElements: Array,
     selectedId: Number,
   },
   mounted() {
-    this.componentElementsCopy = this.componentElements;
+    this.pictureElementsCopy = this.pictureElements;
   },
   data() {
     return {
-      componentElementsCopy: null,
+      pictureElementsCopy: null,
     };
   },
 };

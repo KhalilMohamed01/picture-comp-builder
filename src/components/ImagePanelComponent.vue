@@ -6,19 +6,19 @@
         <tr>
           <td>Image :</td>
           <td>
-            <input @change="$emit('updateData', componentElementsCopy)" type="text" v-model="componentElementsCopy[5].imgUrl" />
+            <input @change="$emit('updateData', pictureElementsCopy)" type="text" v-model="pictureElementsCopy[5].imgUrl" />
           </td>
         </tr>
         <tr>
           <td>Description :</td>
           <td>
-            <input @change="$emit('updateData', componentElementsCopy)" type="text" v-model="componentElementsCopy[5].imgAlt" />
+            <input @change="$emit('updateData', pictureElementsCopy)" type="text" v-model="pictureElementsCopy[5].imgAlt" />
           </td>
         </tr>
         <tr>
           <td>Shape :</td>
           <td>
-            <select @change="$emit('updateData', componentElementsCopy)"  v-model="componentElementsCopy[5].imgShape" class="custom-select" aria-label=".form-select-sm example">
+            <select @change="$emit('updateData', pictureElementsCopy)"  v-model="pictureElementsCopy[5].imgShape" class="custom-select" aria-label=".form-select-sm example">
               <option value="sha-0">
                 <label class="custom-select-option" for="s2">None</label>
               </option>
@@ -42,14 +42,14 @@
 <script>
 export default {
   props: {
-    componentElements: Array,
+    pictureElements: Array,
   },
   mounted() {
-    this.componentElementsCopy = this.componentElements;
+    this.pictureElementsCopy = this.pictureElements;
   },
   data() {
     return {
-      componentElementsCopy: null,
+      pictureElementsCopy: null,
     };
   },
 };

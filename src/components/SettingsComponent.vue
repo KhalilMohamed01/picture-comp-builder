@@ -5,12 +5,12 @@
                 <i class="fa-solid fa-sliders"></i> Settings
             </div>
             <div class="settings-panel">
-              <text-panel-component v-if="selectedId === 0 || selectedId === 1" @updateData="$emit('updateData',componentElementsCopy)" :componentElements="componentElements"
+              <text-panel-component v-if="selectedId === 0 || selectedId === 1" @updateData="$emit('updateData',pictureElementsCopy)" :pictureElements="pictureElements"
             :selectedId="selectedId"></text-panel-component>
-                        <image-panel-component :componentElements="componentElements" v-if="selectedId === 3"></image-panel-component>
+                        <image-panel-component :pictureElements="pictureElements" v-if="selectedId === 3"></image-panel-component>
 
-            <bg-panel-component :componentElements="componentElements" @updateData="$emit('updateData',componentElementsCopy)" ></bg-panel-component>
-            <button-panel-component :componentElements="componentElements" @updateData="$emit('updateData',componentElementsCopy)"></button-panel-component>
+            <bg-panel-component :pictureElements="pictureElements" @updateData="$emit('updateData',pictureElementsCopy)" ></bg-panel-component>
+            <button-panel-component :pictureElements="pictureElements" @updateData="$emit('updateData',pictureElementsCopy)"></button-panel-component>
             </div>
         </div>
             </div>
@@ -33,15 +33,15 @@ export default {
   },
 
   props: {
-    componentElements: Array,
+    pictureElements: Array,
     selectedId:Number,
   },
   mounted() {
-    this.componentElementsCopy = this.componentElements;
+    this.pictureElementsCopy = this.pictureElements;
   },
   data() {
     return {
-      componentElementsCopy: 1,
+      pictureElementsCopy: 1,
     };
   },
 };

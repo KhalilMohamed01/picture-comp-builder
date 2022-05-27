@@ -19,23 +19,23 @@
                     aria-labelledby="wave-tab">
                     <table class="table table-sm table-bordered border-dark">
                         <tr>
-                            <td>Color : {{ componentElementsCopy[2].color }}</td>
+                            <td>Color : {{ pictureElementsCopy[2].color }}</td>
                             <td style="text-align:center"><span class="color-picker">
-                                    <input @change="$emit('updateData', componentElementsCopy)"
-                                        v-model="componentElementsCopy[2].color" type="color" id="colorPicker" />
+                                    <input @change="$emit('updateData', pictureElementsCopy)"
+                                        v-model="pictureElementsCopy[2].color" type="color" id="colorPicker" />
                                 </span></td>
 
                         </tr>
                         <tr>
-                            <td>Opacity : {{componentElementsCopy[2].opacity}} </td>
-                            <td><input @change="$emit('updateData', componentElementsCopy)"
-                                    v-model="componentElementsCopy[2].opacity" width="auto" type="range"
+                            <td>Opacity : {{pictureElementsCopy[2].opacity}} </td>
+                            <td><input @change="$emit('updateData', pictureElementsCopy)"
+                                    v-model="pictureElementsCopy[2].opacity" width="auto" type="range"
                                     class="form-range" min="0" max="1" step="0.01" id="customRange3" /></td>
                         </tr>
                         <tr>
                             <td>Shape :</td>
                             <td>            
-                                <select @change="$emit('updateData', componentElementsCopy)" style="background: #595964; color: white" v-model="componentElementsCopy[2].selectedShape"
+                                <select @change="$emit('updateData', pictureElementsCopy)" style="background: #595964; color: white" v-model="pictureElementsCopy[2].selectedShape"
                                         class="form-select form-select-sm" aria-label=".form-select-sm example">
                                     <option value="0">Wave 1</option>
                                     <option value="1">Wave 2</option>
@@ -56,11 +56,11 @@
                         <tr>
                             <td>Gradient Color :</td>
                             <td> <span class="color-picker">
-                                    <input @change="$emit('updateData', componentElementsCopy)" v-model="componentElementsCopy[3].choosedColor1" type="color" value="#1DB8CE" id="choosedColor1" />
+                                    <input @change="$emit('updateData', pictureElementsCopy)" v-model="pictureElementsCopy[3].choosedColor1" type="color" value="#1DB8CE" id="choosedColor1" />
 
                                 </span>
                                 <span class="color-picker">
-                                    <input @change="$emit('updateData', componentElementsCopy)" v-model="componentElementsCopy[3].choosedColor2" type="color" value="#1DB8CE" id="choosedColor2" />
+                                    <input @change="$emit('updateData', pictureElementsCopy)" v-model="pictureElementsCopy[3].choosedColor2" type="color" value="#1DB8CE" id="choosedColor2" />
                                 </span>
                             </td>
 
@@ -68,7 +68,7 @@
                         <tr>
                             <td>Direction :</td>
                             <td>
-                                <select  @change="$emit('updateData', componentElementsCopy)" style="background: #595964; color: white" v-model="componentElementsCopy[3].choosedSide"
+                                <select  @change="$emit('updateData', pictureElementsCopy)" style="background: #595964; color: white" v-model="pictureElementsCopy[3].choosedSide"
                                     class="form-select form-select-sm" aria-label=".form-select-sm example">
                                     <option selected value="to right">Left to right</option>
                                     <option value="to left">Right to left</option>
@@ -87,14 +87,14 @@
 <script>
 export default {
     props: {
-        componentElements: Array,
+        pictureElements: Array,
     },
     mounted() {
-        this.componentElementsCopy = this.componentElements;
+        this.pictureElementsCopy = this.pictureElements;
     },
     data() {
         return {
-            componentElementsCopy: null,
+            pictureElementsCopy: null,
         };
     },
 };

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="preview">
-      <div :style="changeBackground(componentElements[3].choosedSide, componentElements[3].choosedColor1, componentElements[3].choosedColor2)" class="pic-component">
+      <div :style="changeBackground(pictureElements[3].choosedSide, pictureElements[3].choosedColor1, pictureElements[3].choosedColor2)" class="pic-component">
         <div class="container">
           <div class="header-content">
             <div class="row g-0">
@@ -12,24 +12,24 @@
                     <p
                       :style="
                         updateCSS(
-                          componentElements[0].txtcolor,
-                          componentElements[0].bgcolor,
-                          componentElements[0].isHighlited
+                          pictureElements[0].txtcolor,
+                          pictureElements[0].bgcolor,
+                          pictureElements[0].isHighlited
                         )
                       "
                       :class="[
                         {
                           'text-decoration-underline':
-                            componentElements[0].underlineBool,
-                          'fst-italic': componentElements[0].italicBool,
-                          'fw-bolder': componentElements[0].boldBool,
-                          'text-start': componentElements[0].startBool,
-                          'text-center': componentElements[0].centerBool,
-                          'text-end': componentElements[0].endBool,
+                            pictureElements[0].underlineBool,
+                          'fst-italic': pictureElements[0].italicBool,
+                          'fw-bolder': pictureElements[0].boldBool,
+                          'text-start': pictureElements[0].startBool,
+                          'text-center': pictureElements[0].centerBool,
+                          'text-end': pictureElements[0].endBool,
                           'text-decoration-line-through':
-                            componentElements[0].strikeThroughBool,
+                            pictureElements[0].strikeThroughBool,
                         },
-                        componentElements[0].fontSize,
+                        pictureElements[0].fontSize,
                       ]"
                     >
                       Make your day happier
@@ -41,25 +41,25 @@
                     <p
                       :style="
                         updateCSS(
-                          componentElements[1].txtcolor,
-                          componentElements[1].bgcolor,
-                          componentElements[1].isHighlited
+                          pictureElements[1].txtcolor,
+                          pictureElements[1].bgcolor,
+                          pictureElements[1].isHighlited
                         )
                       "
                       :class="[
                         {
                           'text-decoration-underline':
-                            componentElements[1].underlineBool,
-                          'fst-italic': componentElements[1].italicBool,
-                          'fw-bolder': componentElements[1].boldBool,
-                          'text-start': componentElements[1].startBool,
-                          'text-center': componentElements[1].centerBool,
-                          'text-end': componentElements[1].endBool,
+                            pictureElements[1].underlineBool,
+                          'fst-italic': pictureElements[1].italicBool,
+                          'fw-bolder': pictureElements[1].boldBool,
+                          'text-start': pictureElements[1].startBool,
+                          'text-center': pictureElements[1].centerBool,
+                          'text-end': pictureElements[1].endBool,
                           'text-decoration-line-through':
-                            componentElements[1].strikeThroughBool,
+                            pictureElements[1].strikeThroughBool,
                         },
-                        componentElements[1].fontSize,
-                        componentElements[1].lineHeight,
+                        pictureElements[1].fontSize,
+                        pictureElements[1].lineHeight,
                       ]"
                     >
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper facilisis ligula a euismod. Proin egestas sodales mi et tempus.Etiam semper facilisis ligula a euismod. Proin egestas sodales mi et tempus.
@@ -67,16 +67,16 @@
                   </div>
                 </div>
                 <div class="text-center">
-                  <a v-for="(button, index) in componentElements[4].buttons" :key="index" :style="changeButton(button.btnTextColor,button.btnBgColor)" :href="button.btnLink"  class="theme-btn">{{ button.btnText }}</a>
+                  <a v-for="(button, index) in pictureElements[4].buttons" :key="index" :style="changeButton(button.btnTextColor,button.btnBgColor)" :href="button.btnLink"  class="theme-btn">{{ button.btnText }}</a>
                 </div>
                 </div>
               <div class="col-lg-6">
                 <div style="margin-top: 12%"></div>
                 <img
                   @click="$emit('isFocused', 3)"
-                  :src="componentElements[5].imgUrl"
-                  :class="componentElements[5].imgShape + ' img-fluid'"
-                  :alt="componentElements[5].imgAlt"
+                  :src="pictureElements[5].imgUrl"
+                  :class="pictureElements[5].imgShape + ' img-fluid'"
+                  :alt="pictureElements[5].imgAlt"
                 />
               </div>
             </div>
@@ -88,9 +88,9 @@
           viewBox="0 0 1440 320"
         >
           <path 
-            :fill="componentElements[2].color"
-            :fill-opacity="componentElements[2].opacity"
-            :d="componentElements[2].waveStyle[componentElements[2].selectedShape].shape"
+            :fill="pictureElements[2].color"
+            :fill-opacity="pictureElements[2].opacity"
+            :d="pictureElements[2].waveStyle[pictureElements[2].selectedShape].shape"
           ></path>
         </svg>
       </div>
@@ -102,7 +102,7 @@
 <script>
 export default {
   props: {
-    componentElements: Array,
+    pictureElements: Array,
   },
   methods: {
     updateCSS(txtcolor, bgcolor, isHighlited) {

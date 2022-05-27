@@ -6,12 +6,12 @@
           <preview-component
             @updateData="updateData($event)"
             v-on:isFocused="getClickedElm($event)"
-            :componentElements="componentElements"
+            :pictureElements="pictureElements"
           ></preview-component>
         </div>
         <div class="col-lg-3 g-0 h-100">
           <settings-component
-            :componentElements="componentElements"
+            :pictureElements="pictureElements"
             :selectedId="clickedElm"
           ></settings-component>
         </div>
@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       clickedElm: 0,
-      componentElements: [
+      pictureElements: [
         {
           id: 0,
           txt: "This is a Title",
@@ -132,9 +132,7 @@ export default {
     getClickedElm(IdValue) {
       this.clickedElm = IdValue;
     },
-    updateData(data) {
-      this.componentElements = data;
-    },
+   
   },
 };
 </script>

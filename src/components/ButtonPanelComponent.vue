@@ -4,29 +4,30 @@
                             class="plusBtn"><i class="fa-solid fa-circle-plus"></i></div>
                     </div>
                     <div class="block-tools">
-                        <div class="text-center" v-if="componentElementsCopy[4].buttons.length == 0"> Press the ADD button</div>
-                        <div v-for="(button, index) in componentElementsCopy[4].buttons" :key="index" style="padding:6px">
+                        <div class="text-center" v-if="pictureElementsCopy[4].buttons.length == 0"> Press the ADD button</div>
+                        <div v-for="(button, index) in pictureElementsCopy[4].buttons" :key="index" style="padding:6px">
                             <div class="buttonsdiv">
-                                <div class="buttonsdiv-title text-center">Button {{ index + 1 }}<div @click="deleteBtn(index)"
+                                <div class="buttonsdiv-title text-center">Button {{ index + 1 }}
+                                <div @click="deleteBtn(index)"
                                         class="deleteBtn" style="float:right"><i class="fa-solid fa-trash-can"></i>
-                                    </div>
+                                </div>
                                 </div>
                                 <table class="table table-sm table-bordered border-dark text-center ">
                                     <tr>
                                         <td>Text</td>
                                         <td>
-                                            <input @change="$emit('updateData',componentElementsCopy)" v-model="button.btnText" style="color:white;border:none" type="text" >
+                                            <input @change="$emit('updateData',pictureElementsCopy)" v-model="button.btnText" style="color:white;border:none" type="text" >
                                         </td>
                                         <td>
                                             <div > 
-                                                <input @change="$emit('updateData',componentElementsCopy)" v-model="button.btnTextColor" type="color" value="#1DB8CE">
+                                                <input @change="$emit('updateData',pictureElementsCopy)" v-model="button.btnTextColor" type="color" value="#1DB8CE">
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td >URL</td>
                                         <td>
-                                            <input @change="$emit('updateData',componentElementsCopy)" v-model="button.btnLink" style="color:white;border:none" type="text" >
+                                            <input @change="$emit('updateData',pictureElementsCopy)" v-model="button.btnLink" style="color:white;border:none" type="text" >
                                         </td>
                                         <td></td>
                                     </tr>
@@ -35,7 +36,7 @@
                                         <td></td>
                                         <td>
                                             <div>
-                                                <input @change="$emit('updateData',componentElementsCopy)" v-model="button.btnBgColor" type="color" value="#1DB8CE">
+                                                <input @change="$emit('updateData',pictureElementsCopy)" v-model="button.btnBgColor" type="color" value="#1DB8CE">
                                             </div>
                                         </td>
                                     </tr>
@@ -50,20 +51,20 @@
 <script>
 export default {
   props: {
-    componentElements: Array,
+    pictureElements: Array,
   },
   mounted() {
-    this.componentElementsCopy = this.componentElements;
+    this.pictureElementsCopy = this.pictureElements;
   },
   data() {
     return {
-      componentElementsCopy: null,
+      pictureElementsCopy: null,
     };
   },
 
   methods:{
         addBtn() {
-            this.componentElementsCopy[4].buttons.push({
+            this.pictureElementsCopy[4].buttons.push({
                 btnText: "ButtonTEXT",
                 btnLink: "#",
                 btnTextColor: "#9f1b53",
@@ -71,7 +72,7 @@ export default {
             })
         },
         deleteBtn(index) {
-            this.componentElementsCopy[4].buttons.splice(index, 1);
+            this.pictureElementsCopy[4].buttons.splice(index, 1);
         },
 
   }
@@ -126,13 +127,13 @@ document.querySelectorAll("input[type=color]").forEach(function (picker) {
     padding: 4px;
     border: 1px solid #141217;
 }
-
-table td{
-    color:white;
-}
 .plusBtn:hover {
     background: #3e3e46;
 }
+table td{
+    color:white;
+}
+
 
 .deleteBtn {
     background: #2b2b33;
